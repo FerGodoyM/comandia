@@ -144,8 +144,8 @@ input {
   }
 
   .hero-section {
-    min-height: 100svh;
-    padding: 6.5rem 1rem 2.25rem;
+    min-height: 92svh;
+    padding: 6.15rem 1rem 1rem;
   }
 
   .hero-inner {
@@ -159,15 +159,15 @@ input {
   }
 
   .hero-title {
-    margin-top: 1.1rem;
-    font-size: clamp(3.25rem, 15vw, 4.7rem);
-    line-height: 0.92;
+    margin-top: 0.55rem;
+    font-size: clamp(3.75rem, 17.2vw, 5.35rem);
+    line-height: 0.88;
     letter-spacing: 0;
     transform: none;
   }
 
   .hero-copy {
-    margin-top: 1.25rem;
+    margin-top: 0.45rem;
   }
 
   .hero-kicker {
@@ -182,14 +182,14 @@ input {
     display: block;
     max-width: 21rem;
     margin: 0 auto;
-    font-size: clamp(3.2rem, 14.6vw, 4.55rem);
+    font-size: clamp(3.05rem, 13.8vw, 4.25rem);
     line-height: 0.91;
   }
 
   .mobile-hero-description {
     display: block;
     max-width: 21rem;
-    margin: 1rem auto 0;
+    margin: 0.82rem auto 0;
     font-size: 1rem;
     line-height: 1.55;
   }
@@ -199,7 +199,7 @@ input {
     grid-template-columns: 1fr 1fr;
     gap: 0.7rem;
     max-width: 21rem;
-    margin: 1.25rem auto 0;
+    margin: 1rem auto 0;
   }
 
   .mobile-hero-actions a {
@@ -243,7 +243,11 @@ input {
   }
 
   .section-rounded {
-    padding: 4.5rem 1rem;
+    padding: 4rem 1rem;
+  }
+
+  #problema {
+    margin-top: -2.4rem;
   }
 
   .eyebrow {
