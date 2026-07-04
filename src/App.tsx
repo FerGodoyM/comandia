@@ -408,17 +408,17 @@ function SystemSection() {
               en información útil para controlar inventario, analizar ventas y tomar mejores decisiones.
             </p>
           </Reveal>
-          <div className="relative grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="flow-grid relative grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {flowSteps.map(([label, Icon], index) => (
               <Reveal key={label} delay={index * 0.06}>
                 <article className="flow-card relative min-h-48 overflow-hidden rounded-card border border-cream/15 bg-cream/10 p-6 shadow-lift backdrop-blur-xl">
-                  <div className="flex items-start justify-between gap-6">
-                    <span className="grid size-14 place-items-center rounded-full bg-orange text-cream">
+                  <div className="flow-card-top flex items-start justify-between gap-6">
+                    <span className="flow-icon grid size-14 place-items-center rounded-full bg-orange text-cream">
                       <Icon size={26} />
                     </span>
-                    <span className="font-display text-5xl leading-none text-cream/25">{index + 1}</span>
+                    <span className="flow-number font-display text-5xl leading-none text-cream/25">{index + 1}</span>
                   </div>
-                  <h3 className="mt-9 text-2xl font-bold leading-tight">{label}</h3>
+                  <h3 className="flow-title mt-9 text-2xl font-bold leading-tight">{label}</h3>
                 </article>
               </Reveal>
             ))}

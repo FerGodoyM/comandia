@@ -269,6 +269,50 @@ input {
     font-size: 2rem;
   }
 
+  .flow-grid {
+    gap: 0.85rem;
+  }
+
+  .flow-card {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .flow-card::after {
+    width: 4rem;
+    height: 4rem;
+    opacity: 0.75;
+  }
+
+  .flow-card-top {
+    display: contents;
+  }
+
+  .flow-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .flow-icon svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .flow-number {
+    font-size: 2.5rem;
+    line-height: 0.9;
+    opacity: 0.8;
+  }
+
+  .flow-title {
+    margin-top: 0;
+    font-size: 1.25rem !important;
+    line-height: 1.15;
+  }
+
   .demo-circle {
     width: 100%;
     height: auto;
