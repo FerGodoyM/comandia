@@ -149,8 +149,8 @@ const faqs: Faq[] = [
     answer: "Celulares o tablets para tomar pedidos y pantallas o dispositivos para cocina y caja. La idea es usar equipos que el local ya tenga.",
   },
   {
-    question: "¿Funciona sin internet?",
-    answer: "Sí. Si se usa como aplicación dentro de una red local, puede funcionar sin internet.",
+    question: "¿Qué pasa si internet falla?",
+    answer: "COMAND-IA necesita conexión para sincronizar garzón, cocina y caja. Su enfoque offline-first ayuda cuando la señal es intermitente o hay zonas sin internet: guarda cambios localmente y los sincroniza cuando vuelve la conexión.",
     icon: WifiOff,
   },
   {
