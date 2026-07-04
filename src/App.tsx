@@ -197,9 +197,9 @@ function Reveal({
 
 function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 py-4 text-cream md:px-8">
-      <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-3">
-        <a href="#inicio" className="shrink-0 font-display text-xl uppercase leading-none md:text-2xl">
+    <header className="site-header fixed inset-x-0 top-0 z-50 px-4 py-4 text-cream md:px-8">
+      <div className="header-shell mx-auto flex max-w-[1500px] items-center justify-between gap-3">
+        <a href="#inicio" className="header-brand shrink-0 font-display text-xl uppercase leading-none md:text-2xl">
           - COMAND-IA
         </a>
         <nav
@@ -221,7 +221,7 @@ function Header() {
         </nav>
         <a
           href={whatsappHref}
-          className="rounded-full bg-cream px-4 py-3 text-[10px] font-bold uppercase tracking-[0.25em] text-espresso shadow-lift transition hover:bg-orange hover:text-cream md:px-6"
+          className="header-cta rounded-full bg-cream px-4 py-3 text-[10px] font-bold uppercase tracking-[0.25em] text-espresso shadow-lift transition hover:bg-orange hover:text-cream md:px-6"
         >
           Pedir demo
         </a>
@@ -255,7 +255,7 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen overflow-hidden bg-[linear-gradient(135deg,#1C0F08_0%,#3A1E10_45%,#6B3F24_100%)] px-5 pb-10 pt-28 text-cream md:px-10 md:pt-32"
+      className="hero-section relative flex min-h-screen overflow-hidden bg-[linear-gradient(135deg,#1C0F08_0%,#3A1E10_45%,#6B3F24_100%)] px-5 pb-10 pt-28 text-cream md:px-10 md:pt-32"
     >
       <div className="absolute inset-0 opacity-55 [background:radial-gradient(circle_at_18%_22%,rgba(217,108,36,0.35),transparent_28%),radial-gradient(circle_at_82%_28%,rgba(79,124,69,0.22),transparent_25%),radial-gradient(circle_at_50%_82%,rgba(179,58,28,0.22),transparent_30%)]" />
       {floatingCards.map((card) => (
@@ -287,20 +287,20 @@ function Hero() {
           ))}
         </h1>
 
-        <Reveal delay={0.35} className="mx-auto mt-8 max-w-5xl text-center">
-          <p className="font-display text-4xl uppercase leading-none text-orange md:text-6xl lg:text-7xl">
+        <Reveal delay={0.35} className="hero-copy mx-auto mt-8 max-w-5xl text-center">
+          <p className="hero-kicker font-display text-4xl uppercase leading-none text-orange md:text-6xl lg:text-7xl">
             Comandas, inventario y decisiones inteligentes en un solo sistema.
           </p>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-cream/80 md:text-lg">
+          <p className="hero-description mx-auto mt-6 max-w-3xl text-base leading-8 text-cream/80 md:text-lg">
             COMAND-IA ayuda a restaurantes, cafés y food trucks a tomar pedidos, coordinar cocina,
             cobrar en caja y transformar cada venta en datos útiles mediante dashboards, inventario e
             inteligencia artificial.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 border-t border-cream/15 pt-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+        <div className="hero-bottom mt-12 grid gap-6 border-t border-cream/15 pt-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
           <Reveal>
-            <p className="max-w-2xl text-2xl font-bold leading-tight text-cream md:text-4xl">
+            <p className="hero-message max-w-2xl text-2xl font-bold leading-tight text-cream md:text-4xl">
               Deja de decidir a ojo. Usa los datos reales de tu local para comprar mejor, vender mejor y
               perder menos.
             </p>
@@ -370,7 +370,7 @@ function ProblemSection() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {problems.map((problem, index) => (
             <Reveal key={problem.title} delay={index * 0.08}>
-              <article className="h-full rounded-card bg-beige p-8 shadow-premium transition duration-500 hover:-translate-y-2">
+              <article className="problem-card h-full rounded-card bg-beige p-8 shadow-premium transition duration-500 hover:-translate-y-2">
                 <span className="mb-9 block h-2 w-20 rounded-full bg-tomato" />
                 <h3 className="font-display text-4xl uppercase leading-none">{problem.title}</h3>
                 <p className="mt-6 text-base leading-7 text-espresso/75">{problem.text}</p>
@@ -432,7 +432,7 @@ function ModulesSection() {
           <Reveal delay={0.1}>
             <a
               href={whatsappHref}
-              className="grid size-40 place-items-center rounded-full bg-espresso p-5 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-cream shadow-premium transition hover:scale-105 md:size-52"
+              className="demo-circle grid size-40 place-items-center rounded-full bg-espresso p-5 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-cream shadow-premium transition hover:scale-105 md:size-52"
             >
               Agendar demo
             </a>
@@ -477,10 +477,10 @@ function ModuleCard({ module }: { module: ModuleCard }) {
           </ul>
         </div>
       </div>
-      <div className="absolute inset-0 z-20 grid place-items-end bg-espresso/35 p-7 opacity-0 backdrop-blur-[2px] transition duration-500 ease-premium group-hover:opacity-100">
+      <div className="module-overlay absolute inset-0 z-20 grid place-items-end bg-espresso/35 p-7 opacity-0 backdrop-blur-[2px] transition duration-500 ease-premium group-hover:opacity-100">
         <a
           href={whatsappHref}
-          className="translate-y-8 rounded-full bg-cream px-6 py-4 text-[10px] font-bold uppercase tracking-[0.25em] text-espresso transition duration-500 ease-premium group-hover:-translate-y-8"
+          className="module-cta translate-y-8 rounded-full bg-cream px-6 py-4 text-[10px] font-bold uppercase tracking-[0.25em] text-espresso transition duration-500 ease-premium group-hover:-translate-y-8"
         >
           Consultar
         </a>
@@ -502,7 +502,7 @@ function PricingSection() {
               mensualidad fija alta. La propuesta considera un pago inicial de $80.000 por inicio de
               servicio y luego un cobro mensual según la cantidad de comandas realizadas.
             </p>
-            <div className="mt-8 rounded-card bg-espresso p-8 text-cream shadow-premium">
+            <div className="price-highlight mt-8 rounded-card bg-espresso p-8 text-cream shadow-premium">
               <p className="font-display text-4xl uppercase leading-none md:text-6xl">
                 Precio base estimado: $150 por comanda.
               </p>
@@ -510,7 +510,7 @@ function PricingSection() {
                 Mientras más comandas realice el local, más conveniente puede ser el valor por comanda.
               </p>
             </div>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="pricing-actions mt-8 flex flex-wrap gap-4">
               <a
                 href={whatsappHref}
                 className="inline-flex items-center gap-3 rounded-full bg-orange px-6 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-cream shadow-lift transition hover:bg-tomato"
@@ -533,7 +533,7 @@ function PricingSection() {
               const Icon = faq.icon;
               return (
                 <Reveal key={faq.question} delay={index * 0.05}>
-                  <article className="rounded-card bg-beige/80 p-6 shadow-lift">
+                  <article className="faq-card rounded-card bg-beige/80 p-6 shadow-lift">
                     <div className="flex items-start gap-4">
                       <span className="mt-1 grid size-10 shrink-0 place-items-center rounded-full bg-basil text-cream">
                         {Icon ? <Icon size={19} /> : <Check size={19} strokeWidth={3} />}
@@ -562,7 +562,7 @@ function Footer() {
     <footer id="contacto" className="section-rounded bg-espresso px-5 py-20 text-cream md:px-10">
       <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-6">
-          <h2 className="font-display text-6xl uppercase leading-none md:text-8xl">
+          <h2 className="footer-title font-display text-6xl uppercase leading-none md:text-8xl">
             Agenda una demo con tu carta y tus mesas
           </h2>
           <p className="mt-6 max-w-2xl text-xl leading-8 text-cream/75">
@@ -600,7 +600,7 @@ function Footer() {
               </ul>
             ))}
           </div>
-          <div className="mt-12 rounded-card border border-cream/15 bg-cream/10 p-7 backdrop-blur-xl">
+          <div className="contact-card mt-12 rounded-card border border-cream/15 bg-cream/10 p-7 backdrop-blur-xl">
             <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-orange">Contacto directo</p>
             <a className="mt-5 block text-2xl font-bold" href={whatsappHref}>
               WhatsApp: +56 9 5884 0933

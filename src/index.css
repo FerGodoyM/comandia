@@ -116,17 +116,145 @@ input {
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    padding: 0.75rem;
+  }
+
+  .header-shell {
+    padding: 0.45rem 0.45rem 0.45rem 0.75rem;
+    border: 1px solid rgba(247, 230, 196, 0.16);
+    border-radius: 999px;
+    background: rgba(28, 15, 8, 0.4);
+    box-shadow: 0 16px 40px rgba(28, 15, 8, 0.22);
+    backdrop-filter: blur(20px);
+  }
+
+  .header-brand {
+    max-width: 52vw;
+    overflow: hidden;
+    font-size: 1.05rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-cta {
+    padding: 0.72rem 0.85rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-section {
+    min-height: 100svh;
+    padding: 6.8rem 1rem 2.25rem;
+  }
+
   .hero-title {
-    font-size: clamp(2.9rem, 12vw, 4.8rem);
-    transform: scaleX(1.02);
+    font-size: clamp(2.6rem, 13.2vw, 4.2rem);
+    line-height: 0.92;
+    letter-spacing: 0;
+    transform: none;
+  }
+
+  .hero-copy {
+    margin-top: 1rem;
+  }
+
+  .hero-kicker {
+    font-size: clamp(2rem, 11vw, 3.1rem);
+    line-height: 0.94;
+  }
+
+  .hero-description {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-bottom {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+  }
+
+  .hero-message {
+    font-size: 1.25rem;
+    line-height: 1.18;
   }
 
   .section-title {
-    font-size: clamp(3.2rem, 4.25rem, 5rem);
+    font-size: clamp(3rem, 15vw, 4.5rem);
+    line-height: 0.86;
   }
 
   .section-rounded {
     border-radius: 3rem 3rem 0 0;
+  }
+
+  .section-rounded {
+    padding: 4.5rem 1rem;
+  }
+
+  .eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+  }
+
+  .problem-card,
+  .flow-card,
+  .faq-card,
+  .contact-card,
+  .price-highlight {
+    border-radius: 1.75rem;
+    padding: 1.35rem;
+  }
+
+  .problem-card h3,
+  .flow-card h3 {
+    font-size: 2rem;
+  }
+
+  .demo-circle {
+    width: 8.5rem;
+    height: 8.5rem;
+    justify-self: start;
+  }
+
+  .module-card {
+    min-height: 360px;
+    border-radius: 1.8rem;
+    padding: 1.35rem;
+  }
+
+  .module-card h3 {
+    font-size: 2.75rem;
+  }
+
+  .pricing-actions a {
+    width: 100%;
+    justify-content: center;
+    padding-inline: 1.15rem;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: clamp(3.3rem, 16vw, 4.7rem);
+    line-height: 0.92;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .module-overlay {
+    inset: auto 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.15rem;
+    background: transparent;
+    opacity: 1;
+    backdrop-filter: none;
+  }
+
+  .module-cta {
+    transform: none;
+    box-shadow: 0 14px 35px rgba(28, 15, 8, 0.2);
   }
 }
 
