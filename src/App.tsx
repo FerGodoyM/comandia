@@ -266,9 +266,9 @@ function Hero() {
           reducedMotion={Boolean(reducedMotion)}
         />
       ))}
-      <div className="relative z-10 mx-auto flex w-full max-w-[1500px] flex-col justify-center">
+      <div className="hero-inner relative z-10 mx-auto flex w-full max-w-[1500px] flex-col justify-center">
         <Reveal className="mb-8 flex justify-center">
-          <span className="rounded-full border border-cream/15 bg-orange/30 px-5 py-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-cream backdrop-blur-xl">
+          <span className="hero-label rounded-full border border-cream/15 bg-orange/30 px-5 py-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-cream backdrop-blur-xl">
             IA para locales gastronómicos
           </span>
         </Reveal>
@@ -291,11 +291,21 @@ function Hero() {
           <p className="hero-kicker font-display text-4xl uppercase leading-none text-orange md:text-6xl lg:text-7xl">
             Comandas, inventario y decisiones inteligentes en un solo sistema.
           </p>
+          <p className="mobile-hero-kicker hidden font-display uppercase text-orange">
+            Deja de decidir a ojo.
+          </p>
           <p className="hero-description mx-auto mt-6 max-w-3xl text-base leading-8 text-cream/80 md:text-lg">
             COMAND-IA ayuda a restaurantes, cafés y food trucks a tomar pedidos, coordinar cocina,
             cobrar en caja y transformar cada venta en datos útiles mediante dashboards, inventario e
             inteligencia artificial.
           </p>
+          <p className="mobile-hero-description hidden text-cream/82">
+            Pedidos, caja, inventario y recomendaciones con IA para vender mejor y perder menos.
+          </p>
+          <div className="mobile-hero-actions hidden">
+            <a href={whatsappHref}>Pedir demo</a>
+            <a href="#precio">Ver precio</a>
+          </div>
         </Reveal>
 
         <div className="hero-bottom mt-12 grid gap-6 border-t border-cream/15 pt-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
