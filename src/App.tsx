@@ -454,7 +454,7 @@ function ModuleCard({ module }: { module: ModuleCard }) {
   const Icon = module.icon;
   return (
     <article className="module-card group relative flex aspect-[4/5] min-h-[430px] overflow-hidden rounded-card bg-cream p-7 text-espresso shadow-premium transition duration-500 ease-premium hover:-translate-y-3">
-      <div className="relative z-10 flex w-full flex-col">
+      <div className="module-content relative z-10 flex w-full flex-col">
         <div className="flex items-start justify-between gap-4">
           <span
             className="grid size-16 place-items-center rounded-full text-cream"
@@ -503,8 +503,8 @@ function PricingSection() {
               servicio y luego un cobro mensual según la cantidad de comandas realizadas.
             </p>
             <div className="price-highlight mt-8 rounded-card bg-espresso p-8 text-cream shadow-premium">
-              <p className="font-display text-4xl uppercase leading-none md:text-6xl">
-                Precio base estimado: $150 por comanda.
+              <p className="price-title font-display text-4xl uppercase leading-none md:text-6xl">
+                Precio base estimado: <span className="price-amount">$150</span> por comanda.
               </p>
               <p className="mt-5 text-cream/75">
                 Mientras más comandas realice el local, más conveniente puede ser el valor por comanda.

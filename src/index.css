@@ -222,10 +222,23 @@ input {
     min-height: 360px;
     border-radius: 1.8rem;
     padding: 1.35rem;
+    flex-direction: column;
+  }
+
+  .module-content {
+    flex: 1;
   }
 
   .module-card h3 {
     font-size: 2.75rem;
+  }
+
+  .price-title {
+    font-size: clamp(2.75rem, 12vw, 4.2rem);
+  }
+
+  .price-amount {
+    display: inline-block;
   }
 
   .pricing-actions a {
@@ -243,19 +256,32 @@ input {
 
 @media (hover: none) and (pointer: coarse) {
   .module-overlay {
-    inset: auto 0 0 0;
     display: flex;
-    justify-content: flex-end;
-    padding: 1.15rem;
+    position: static;
+    z-index: 30;
+    justify-content: stretch;
+    margin-top: 1.35rem;
+    padding: 0;
     background: transparent;
     opacity: 1;
     backdrop-filter: none;
   }
 
   .module-cta {
+    width: 100%;
     transform: none;
-    box-shadow: 0 14px 35px rgba(28, 15, 8, 0.2);
+    background: #1c0f08;
+    color: #f7e6c4;
+    padding: 1rem 1.1rem;
+    text-align: center;
+    letter-spacing: 0.2em;
+    box-shadow: 0 14px 35px rgba(28, 15, 8, 0.16);
   }
+}
+
+.price-amount {
+  color: #d96c24;
+  text-shadow: 0 0.08em 0 rgba(247, 230, 196, 0.12);
 }
 
 @media (prefers-reduced-motion: reduce) {
