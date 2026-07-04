@@ -448,7 +448,7 @@ function ModulesSection() {
             </a>
           </Reveal>
         </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="modules-grid mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {modules.map((module, index) => (
             <Reveal key={module.title} delay={index * 0.08}>
               <ModuleCard module={module} />

@@ -270,9 +270,17 @@ input {
   }
 
   .demo-circle {
-    width: 8.5rem;
-    height: 8.5rem;
-    justify-self: start;
+    width: 100%;
+    height: auto;
+    min-height: 3.55rem;
+    justify-self: stretch;
+    border-radius: 999px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 16px 36px rgba(28, 15, 8, 0.18);
+  }
+
+  .modules-grid {
+    margin-top: 2rem;
   }
 
   .module-card {
