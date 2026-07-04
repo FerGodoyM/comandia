@@ -472,7 +472,13 @@ function ModuleCard({ module }: { module: ModuleCard }) {
           >
             <Icon size={30} />
           </span>
-          <ArrowRight className="mt-2 text-espresso/35 transition group-hover:translate-x-1 group-hover:text-espresso" />
+          <a
+            href={whatsappHref}
+            aria-label={`Consultar módulo ${module.title}`}
+            className="module-arrow mt-1 grid size-10 place-items-center rounded-full text-espresso/45 transition hover:bg-espresso hover:text-cream group-hover:translate-x-1 group-hover:text-espresso"
+          >
+            <ArrowRight size={24} />
+          </a>
         </div>
         <div className="mt-auto transition duration-500 ease-premium group-hover:-translate-y-5">
           <h3 className="font-display text-5xl uppercase leading-none">{module.title}</h3>
