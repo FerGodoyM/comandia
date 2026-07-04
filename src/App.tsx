@@ -204,13 +204,13 @@ function Header() {
         </a>
         <nav
           aria-label="Navegación principal"
-          className="hidden rounded-full border border-cream/20 bg-cream/10 px-5 py-3 shadow-premium backdrop-blur-[20px] lg:block"
+          className="desktop-nav hidden rounded-full border border-cream/20 bg-cream/10 px-5 py-3 shadow-premium backdrop-blur-[20px] lg:block"
         >
           <ul className="flex items-center gap-5">
             {navItems.map(([label, href]) => (
               <li key={label}>
                 <a
-                  className="text-[10px] font-bold uppercase tracking-[0.25em] text-cream/85 transition hover:text-cream"
+                  className="desktop-nav-link text-[10px] font-bold uppercase tracking-[0.25em] text-cream/85 transition hover:text-cream"
                   href={href}
                 >
                   {label}
